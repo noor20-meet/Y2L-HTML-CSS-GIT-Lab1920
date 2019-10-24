@@ -2,14 +2,45 @@
 
 <header> 
 	<style> #paragraph {color:red;} 
-			.link {font-size:32pt}; </style>
+			.link {font-size:32pt}; 
+			div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+</style>
+</head>
+<body></style>
 <title> dogs </title> 
 </header>
 
 <body bgcolor="pink">
 	<h1> I love dogs </h1>
 	<h2> Do you? </h2>
-	<p id='paragraph'> They're cute. <br>
+	<p id='paragraph'> <div> They're cute. </div> <br>
 	<p> <img src='dog.png' height=700 width=700> <br>
 		<a class='link' href='https://www.google.com/search?q=stupid+dog&client=ubuntu&hs=zSJ&channel=fs&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjvqdjmiJLlAhU2QhUIHYzdBBgQ_AUIESgB&biw=1853&bih=916#imgrc=BAiEiNABX0AOwM:'> click here to see more dogs</a></p>
 </body>
